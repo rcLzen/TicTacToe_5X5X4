@@ -1,0 +1,270 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicTacToe_Ultimate_Edition" xmlns:local1="clr-namespace:TicTacToe_Ultimate_Edition.Views" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="TicTacToe_Ultimate_Edition.Views.GameGridView" 
+             mc:Ignorable="d" Height="450" Width="730" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnGiveFeedback1"/>
+        <Storyboard x:Key="ChangeColorForCurrentPlayer"/>
+        <Storyboard x:Key="BackToMainMenu"/>
+        <Storyboard x:Key="ButtonEffect"/>
+        <Style x:Key="ButtonFocusVisual">
+        	<Setter Property="Control.Template">
+        		<Setter.Value>
+        			<ControlTemplate/>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+        	<GradientStop Color="#F3F3F3" Offset="0"/>
+        	<GradientStop Color="#EBEBEB" Offset="0.5"/>
+        	<GradientStop Color="#DDDDDD" Offset="0.5"/>
+        	<GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+        	<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        	<Setter Property="BorderThickness" Value="1"/>
+        	<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        	<Setter Property="HorizontalContentAlignment" Value="Center"/>
+        	<Setter Property="VerticalContentAlignment" Value="Center"/>
+        	<Setter Property="Padding" Value="1"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="{x:Type Button}">
+        				<Themes:ButtonChrome x:Name="Chrome" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true" RoundCorners="False" Background="#FF469FC9">
+        					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        				</Themes:ButtonChrome>
+        				<ControlTemplate.Triggers>
+        					<Trigger Property="IsKeyboardFocused" Value="true">
+        						<Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
+        					</Trigger>
+        					<Trigger Property="ToggleButton.IsChecked" Value="true">
+        						<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
+        					</Trigger>
+        					<Trigger Property="IsEnabled" Value="false">
+        						<Setter Property="Foreground" Value="#ADADAD"/>
+        					</Trigger>
+        				</ControlTemplate.Triggers>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        	<Setter Property="Background" Value="#FF469FC9"/>
+        	<Setter Property="BorderBrush" Value="{x:Null}"/>
+        	<Setter Property="FontFamily" Value="Global User Interface"/>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+        	<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        	<Setter Property="Background" Value="#FF3BA6C8"/>
+        	<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+        	<Setter Property="BorderThickness" Value="0"/>
+        	<Setter Property="Foreground" Value="#FFF7EDED"/>
+        	<Setter Property="HorizontalContentAlignment" Value="Center"/>
+        	<Setter Property="VerticalContentAlignment" Value="Center"/>
+        	<Setter Property="Padding" Value="1"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="{x:Type Button}">
+                        <!--RenderMouseOver="{TemplateBinding IsMouseOver}"-->
+        				<Themes:ButtonChrome x:Name="Chrome"  RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true" Opacity="1" Background="#FF3BA6C8">
+        					<VisualStateManager.VisualStateGroups>
+        						<VisualStateGroup x:Name="CommonStates">
+        							<VisualState x:Name="Normal"/>
+        							<VisualState x:Name="MouseOver">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="contentPresenter">
+        										<DiscreteObjectKeyFrame KeyTime="0">
+        											<DiscreteObjectKeyFrame.Value>
+        												<SolidColorBrush Color="#FFE81919"/>
+        											</DiscreteObjectKeyFrame.Value>
+        										</DiscreteObjectKeyFrame>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Pressed">
+        								<Storyboard>
+        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="contentPresenter">
+        										<DiscreteObjectKeyFrame KeyTime="0">
+        											<DiscreteObjectKeyFrame.Value>
+        												<SolidColorBrush Color="#FF192CE8"/>
+        											</DiscreteObjectKeyFrame.Value>
+        										</DiscreteObjectKeyFrame>
+        									</ObjectAnimationUsingKeyFrames>
+        								</Storyboard>
+        							</VisualState>
+        							<VisualState x:Name="Disabled"/>
+        						</VisualStateGroup>
+        					</VisualStateManager.VisualStateGroups>
+        					<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="15.525,3,15.525,0" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+        				</Themes:ButtonChrome>
+        				<ControlTemplate.Triggers>
+        					<Trigger Property="IsKeyboardFocused" Value="true">
+        						<Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
+        					</Trigger>
+        					<Trigger Property="ToggleButton.IsChecked" Value="true">
+        						<Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
+        					</Trigger>
+        					<Trigger Property="IsEnabled" Value="false">
+        						<Setter Property="Foreground" Value="#ADADAD"/>
+        					</Trigger>
+        				</ControlTemplate.Triggers>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        	<Setter Property="FontSize" Value="18.667"/>
+        	<Setter Property="FontWeight" Value="Light"/>
+        	<Setter Property="FontFamily" Value="Global User Interface"/>
+        	<Setter Property="Height" Value="31"/>
+        	<Setter Property="Width" Value="71"/>
+        	<Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Storyboard x:Key="DiagonalRight"/>
+        <Storyboard x:Key="Player1_Win"/>
+        <Storyboard x:Key="PlayerLose"/>
+        <Storyboard x:Key="GameDraw">
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridPlayerDraw">
+        		<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Player2Wins"/>
+        <Storyboard x:Key="Player2Lose">
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridPlayerLose2">
+        		<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Player1Lose"/>
+        <Storyboard x:Key="Thinking">
+        	<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridThinking">
+        		<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+        		<DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+        	</ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+	<Grid x:Name="container" Width="730" VerticalAlignment="Center" HorizontalAlignment="Center" Height="450" Background="#FFEEECEC">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="VisualStateGroup"/>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+
+
+
+		<Grid Margin="289,64,243,16">
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="210" Margin="0,77.998,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top"/>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="210" Margin="49.194,77.998,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top"/>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="210" Margin="98.267,77.998,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top"/>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="210" Margin="146.927,77.998,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top"/>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="250" Margin="71.81,0,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="250" Margin="71.81,37.998,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="250" Margin="71.81,78.996,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="5">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+			<Path Data="M200,140 C200,320 200,320 200,320" Fill="#FFF7FBF7" HorizontalAlignment="Left" Height="250" Margin="71.81,120,0,0" Stretch="Fill" Stroke="#FF4F514F" StrokeThickness="5" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+				<Path.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform Angle="90"/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</Path.RenderTransform>
+			</Path>
+		</Grid>
+		<WrapPanel x:Name="gridContainer" HorizontalAlignment="Center" Height="202" Margin="176.321,111.455,177.679,66.545" Width="246" VerticalAlignment="Center"/>
+		<Grid x:Name="VSsymbol" Margin="332,35,324,331">
+			<Label Content="VS" FontSize="48" Background="{x:Null}" FontWeight="Bold" Margin="0,0,-12,0">
+				<Label.Foreground>
+					<SolidColorBrush Color="{DynamicResource BlueGame}"/>
+				</Label.Foreground>
+				<Label.Effect>
+					<DropShadowEffect/>
+				</Label.Effect>
+			</Label>
+		</Grid>
+		<Button x:Name="btnBack" Content="Back" RenderTransformOrigin="0.48,0.455" Click="btnBackMainMenu_Click" Style="{DynamicResource ButtonStyleBack}" BorderBrush="{x:Null}" VerticalContentAlignment="Top" Margin="11,0,0,10"/>
+		<local1:GameScorePanel x:Name="PlayerPanel1" Margin="72,14,0,0" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" UseLayoutRounding="True"/>
+		<local1:GameScorePanel2 x:Name="PlayerPanel2" Margin="0,14,72,0" Height="100" VerticalAlignment="Top" HorizontalAlignment="Right" UseLayoutRounding="True"/>
+		<local:GridPlayerWinControl x:Name="GridPlayer1Win" Margin="35,125,495,125"/>
+		<local:GridPlayerLoseControl x:Name="GridPlayer1Lose" Margin="35,125,495,125"/>
+		<Grid x:Name="GridPlayerDraw" Margin="212,64,218,86" Width="300" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+			<Rectangle x:Name="rectangle2" Height="100" StrokeThickness="3" Width="200" Margin="52.5,95.5,47.5,104.5" Fill="#AAA" Opacity="0.8" RadiusY="5" RadiusX="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			<Label Content="Draw !!!" HorizontalAlignment="Center" Height="41.255" VerticalAlignment="Center" Width="195" FontSize="26.667" Foreground="#FFEA7F14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Impact"/>
+
+
+
+		</Grid>
+		<local:GridPlayer2WinControl x:Name="GridPlayer2Win" Margin="512,148.455,18,101.545"/>
+		<Grid x:Name="GridPlayerLose2" Width="200" Height="200" Margin="497,125,33,125" Visibility="Collapsed">
+			<ed:Callout x:Name="callout" AnchorPoint="0.142,1.627" CalloutStyle="RoundedRectangle" Content="You are too good!!!" FontSize="14.667" StrokeThickness="3" Foreground="#FFC7644E" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Width="120" Height="50" Margin="70,21,10,129">
+				<ed:Callout.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform/>
+						<SkewTransform/>
+						<RotateTransform/>
+						<TranslateTransform/>
+					</TransformGroup>
+				</ed:Callout.RenderTransform>
+				<ed:Callout.Fill>
+					<SolidColorBrush Color="#FFC1B7B7" Opacity="0.8"/>
+				</ed:Callout.Fill>
+			</ed:Callout>
+			<Image x:Name="imgAvatar" Height="80" Width="80" Source="/TicTacToe Ultimate Edition;component/Resources/Images/Avatars/Avatar07.png" Margin="0,110,110,10">
+				<Image.Effect>
+					<DropShadowEffect/>
+				</Image.Effect>
+			</Image>
+
+
+
+		</Grid>
+		<Grid x:Name="GridThinking" Width="200" Height="200" Margin="495,125,35,125" Visibility="Collapsed">
+			<Image x:Name="imgAvatar_Copy3" Height="80" Width="80" Source="/TicTacToe Ultimate Edition;component/Resources/Images/Avatars/Avatar06.png" Margin="0,110,110,10">
+				<Image.Effect>
+					<DropShadowEffect/>
+				</Image.Effect>
+			</Image>
+			<ed:Callout AnchorPoint="0,1.5" CalloutStyle="Cloud" Content="Hum..." FontSize="14.667" HorizontalAlignment="Left" Height="60" Margin="82,21,0,0" StrokeThickness="3" VerticalAlignment="Top" Width="99">
+				<ed:Callout.Fill>
+					<SolidColorBrush Color="#FFC1B7B7" Opacity="0.8"/>
+				</ed:Callout.Fill>
+			</ed:Callout>
+
+
+
+		</Grid>
+		<local:GridPLose2Control x:Name="GridPLose2" Margin="495,125,35,125"/>
+
+
+
+	</Grid>
+</UserControl>

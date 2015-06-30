@@ -1,0 +1,316 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicTacToe_Ultimate_Edition.Views" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="TicTacToe_Ultimate_Edition.Views.GameMenu" 
+             mc:Ignorable="d" Height="450" Width="730" BorderThickness="1" Background="#FF0CCDF9">
+    <UserControl.Resources>
+        <Storyboard x:Key="NewGameClick">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridGameMode">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.32" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="GridGameMode">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.32" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnTutorial">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnSettings">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnExit">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnRankings">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnPlayerProfile">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="GameModeCancel">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="GridGameMode">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridGameMode">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnNewGame">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnTutorial">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnSettings">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnExit">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnRankings">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnReloadDb">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnNewGame">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnTutorial">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnSettings">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnExit">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnRankings">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="btnReloadDb">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="btnPlayerProfile">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <!--<Storyboard x:Key="AccesToRankings">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="gameRankings">
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard> -->
+        <Storyboard x:Key="UserLogin">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle StrokeDashArray="1 2" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" Margin="2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#F3F3F3" Offset="0"/>
+            <GradientStop Color="#EBEBEB" Offset="0.5"/>
+            <GradientStop Color="#DDDDDD" Offset="0.5"/>
+            <GradientStop Color="#CDCDCD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Themes:ButtonChrome x:Name="Chrome" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}" RenderDefaulted="{TemplateBinding IsDefaulted}" SnapsToDevicePixels="true" Background="#FF0EC7F0" BorderBrush="White">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Themes:ButtonChrome>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="RenderDefaulted" TargetName="Chrome" Value="true"/>
+                            </Trigger>
+                            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                                <Setter Property="RenderPressed" TargetName="Chrome" Value="true"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnNewGame">
+            <BeginStoryboard x:Name="NewGameClick_BeginStoryboard" Storyboard="{StaticResource NewGameClick}"/>
+
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnCancelMode">
+            <BeginStoryboard Storyboard="{StaticResource GameModeCancel}"/>
+        </EventTrigger>
+        <!--<EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnRankings">
+    		<BeginStoryboard x:Name="AccesToRankings_BeginStoryboard1" Storyboard="{StaticResource AccesToRankings}"/>
+    	</EventTrigger> -->
+    </UserControl.Triggers>
+    <Grid x:Name="GridGameMenu" Margin="0" Width="730" Height="450">
+        <Grid.Background>
+            <ImageBrush ImageSource="/TicTacToe Ultimate Edition;component/Resources/Images/MainMenuBackground2.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnNewGame" Content="New Game" Margin="429,80.386,81,338.614" Width="220" Height="31" Background="#FF3BA6C8" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" Foreground="#FFF4F5F5" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnTutorial" Content="Help" Margin="429,263.392,81,155.607" Width="220" Height="31" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="btnTutorial_Click" Foreground="#FFFBFDFD" FontWeight="Bold">
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource BlueGame}"/>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnSettings" Content="Settings" Width="220" RenderTransformOrigin="0.5,0.65" Height="31" Click="btnSettings_Click" Background="#FF3BA6C8" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" Foreground="#FFF4F5F5" BorderBrush="{x:Null}" Margin="429,217.5,81,201.5" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnExit" Content="Exit" Margin="429,309.621,81,109.379" Width="220" Height="31" Background="#FF3BA6C8" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" Foreground="#FFF4F5F5" RenderTransformOrigin="0.5,0.5" Click="btnExit_Click" BorderBrush="{x:Null}" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRankings" Content="Rankings" Width="220" Height="31" Click="btnRankings_Click" Background="#FF3BA6C8" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" Foreground="#FFF4F5F5" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="429,170.5,81,248.5" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnPlayerProfile" Content="Profile" Width="220" Height="31" Click="btnPlayerProfile_Click" Background="#FF3BA6C8" BorderThickness="0" FontSize="18.667" FontFamily="Global User Interface" Foreground="#FFF4F5F5" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="429,125.386,81,293.614" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnReloadDb" Content="Delete Db Content" HorizontalAlignment="Left" Margin="450,375,0,0" VerticalAlignment="Top" Width="181" Click="btnReloadDb_Click" RenderTransformOrigin="0.5,0.5" Height="35" Visibility="Hidden">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Grid x:Name="GridGameMode" Height="205" RenderTransformOrigin="0.118,0.055" Width="220" Margin="429,125.386,81,119.614" Visibility="Collapsed">
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Rectangle x:Name="rectangle" Height="195" Width="220"/>
+            <Button x:Name="btnSinglePlayer" Content="Single Player" VerticalAlignment="Top" Width="220" Height="31" Background="#FF3BA6C8" BorderBrush="{x:Null}" BorderThickness="0" FontSize="16" Foreground="#FFFBFBFD" Click="btnSinglePlayer_Click" HorizontalAlignment="Center" FontFamily="Global User Interface" FontWeight="Bold"/>
+            <Button x:Name="btnMultiPlayer" Content="Multi Player" Width="220" Height="31" Background="#FF3BA6C8" BorderBrush="{x:Null}" BorderThickness="0" FontSize="16" Foreground="#FFFBFBFD" Click="btnMultiPlayer_Click" Margin="0,45,0,129" FontFamily="Global User Interface" FontWeight="Bold"/>
+            <Button x:Name="btnCancelMode" Content="Cancel" Width="220" Height="31" Background="#FF3BA6C8" BorderBrush="{x:Null}" BorderThickness="0" FontSize="16" Foreground="#FFFBFBFD" FontFamily="Global User Interface" FontWeight="Bold"/>
+        </Grid>
+        <Grid x:Name="grid" Margin="54,80" Visibility="Collapsed">
+            <Rectangle Margin="30,-24.5" Stroke="Black">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#FF535353" Opacity="0.9"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <local:UserLogin x:Name="userLogin" Margin="133.5,45" BorderBrush="#FFFFFDFD" Height="Auto" Width="Auto"/>
+        </Grid>
+    </Grid>
+</UserControl>

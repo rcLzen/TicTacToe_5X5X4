@@ -1,0 +1,119 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+	mc:Ignorable="d"
+	x:Class="TicTacToe_Ultimate_Edition.GameTutorial"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="460.8" Width="730" Height="450">
+
+    <Grid x:Name="GridTutorial">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="10*"/>
+    		<ColumnDefinition Width="63*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.Background>
+    		<SolidColorBrush Color="{DynamicResource ColorMainBackground}"/>
+    	</Grid.Background>
+        <Label HorizontalAlignment="Left" Margin="57,359.333,0,0" VerticalAlignment="Top" Height="25.96" Width="139" Content="Enjoy the Game!!!" FontFamily="Global User Interface" Grid.Column="1"/>
+        <Label Content="Help" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="100" FontFamily="Global User Interface" FontSize="40" FontWeight="Bold">
+        	<Label.Background>
+        		<SolidColorBrush Color="{DynamicResource BlueGame}" Opacity="0.6"/>
+        	</Label.Background>
+        	<Label.Foreground>
+        		<SolidColorBrush Color="{DynamicResource PageTitleGame}"/>
+        	</Label.Foreground>
+        </Label>
+        <Label Content="How to play the game? " HorizontalAlignment="Left" Margin="43,30,0,0" VerticalAlignment="Top" FontFamily="Global User Interface" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
+        <Grid HorizontalAlignment="Left" Height="30" Margin="18,72,0,0" VerticalAlignment="Top" Width="30" Grid.Column="1">
+        	<Ellipse HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30">
+        		<Ellipse.Fill>
+        			<SolidColorBrush Color="{DynamicResource BlueGame}" Opacity="0.8"/>
+        		</Ellipse.Fill>
+        	</Ellipse>
+        	<Label Content="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Global User Interface">
+        		<Label.Foreground>
+        			<SolidColorBrush Color="{DynamicResource PageTitleGame}"/>
+        		</Label.Foreground>
+        	</Label>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="30" Margin="18,112.733,0,0" VerticalAlignment="Top" Width="30" Grid.Column="1">
+        	<Ellipse HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30">
+        		<Ellipse.Fill>
+        			<SolidColorBrush Color="{DynamicResource BlueGame}" Opacity="0.8"/>
+        		</Ellipse.Fill>
+        	</Ellipse>
+        	<Label Content="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Global User Interface">
+        		<Label.Foreground>
+        			<SolidColorBrush Color="{DynamicResource PageTitleGame}"/>
+        		</Label.Foreground>
+        	</Label>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="30" Margin="18,354.333,0,0" VerticalAlignment="Top" Width="30" Grid.Column="1">
+        	<Ellipse HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30">
+        		<Ellipse.Fill>
+        			<SolidColorBrush Color="{DynamicResource BlueGame}" Opacity="0.8"/>
+        		</Ellipse.Fill>
+        	</Ellipse>
+        	<Label Content="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" FontFamily="Global User Interface">
+        		<Label.Foreground>
+        			<SolidColorBrush Color="{DynamicResource PageTitleGame}"/>
+        		</Label.Foreground>
+        	</Label>
+        </Grid>
+        <Label Content="Click on New Game " HorizontalAlignment="Left" Height="24.5" Margin="53,73.45,0,0" VerticalAlignment="Top" Width="143" Grid.Column="1"/>
+        <RichTextBox Margin="303,75.45,31.667,49.6" BorderBrush="{x:Null}" Grid.Column="1" SelectionBrush="{x:Null}" Focusable="False" AllowDrop="False" IsHitTestVisible="False">
+        	<RichTextBox.Background>
+        		<SolidColorBrush Color="{DynamicResource ColorMainBackground}"/>
+        	</RichTextBox.Background>
+        	<FlowDocument>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="Profile Page"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Here you would be able to change your registered name and you animation"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="Rankings Page"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Here you can view your ranking among other players, total score, wins and losses."/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="Settings"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Here you can control the volume and chose your music"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="How is score calculated? "/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Single Player: A perfect score can be achieved if you win a game in 4  moves. After four moves the score the score will be deducted for each move."/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Multiplayer: Winning someone with higher score will get you more score.  If you bet someone with lower score then you will not get as high points. "/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="To go back to Home Page Click Back on the left side of screen."/></Paragraph>
+        	</FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="241" Margin="53,113.333,0,0" VerticalAlignment="Top" Width="209" FontFamily="Global User Interface" BorderBrush="{x:Null}" Grid.Column="1" AllowDrop="False" Focusable="False" IsHitTestVisible="False" TextChanged="RichTextBox_TextChanged">
+        	<RichTextBox.Background>
+        		<SolidColorBrush Color="{DynamicResource ColorMainBackground}"/>
+        	</RichTextBox.Background>
+        	<FlowDocument>
+        		<Paragraph LineHeight="1.333"><Run Text="Click on Single Player or Multiplayer"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="Single player "/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Type in your name OR If you have already entered your name"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Chose your name from the list"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Chose the level you prefer (Easy, Medium OR Hard)"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run FontWeight="Bold" Text="Multiplayer"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Type in Player 1 name or chose from the list"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Type in Player 2 name or chose from the list"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="Click OK"/></Paragraph>
+        		<Paragraph LineHeight="1.333"><Run Text="If you want to play as "/><Run FontWeight="Bold" Text="Guest"/><Run Text=" just hit OK."/></Paragraph>
+        	</FlowDocument>
+        </RichTextBox>
+        <Path Data="M2.4993126,2.4152848 L296.5007,97.584716" HorizontalAlignment="Left" Height="100" Margin="135,175,0,0" StrokeThickness="5" VerticalAlignment="Top" Width="299" RenderTransformOrigin="0.5,0.5" StrokeDashOffset="5" Grid.Column="1">
+        	<Path.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="252"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Path.RenderTransform>
+        	<Path.Stroke>
+        		<SolidColorBrush Color="{DynamicResource BlueGame}" Opacity="0.6"/>
+        	</Path.Stroke>
+        	<Path.Fill>
+        		<SolidColorBrush Color="#FF3BA6C8"/>
+        	</Path.Fill>
+        </Path>
+        <Button x:Name="btnBackFromHelp" Content="Back" Style="{DynamicResource ButtonStyleBack}" Click="btnBackMainMenu_Click" Width="75" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+    </Grid>
+</UserControl>

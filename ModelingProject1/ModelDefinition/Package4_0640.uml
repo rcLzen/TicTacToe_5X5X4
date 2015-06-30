@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="42f4cbe3-afb0-43b0-8a56-a96bccb8f5c9"
+  name="Media"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="32d8536e-1b7e-483d-8eb3-aa2a9e10a0d4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Windows.Media"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="0599ff7e-f4ce-4475-8aca-d084a2b7cf98"
+        name="MediaPlayer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="43fadffb-b1ca-4edb-a1cd-9e00aab1f8ff"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DMediaPlayer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bab5a7e8-b142-41b5-8fad-3265ea5707a8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="daab1231-8827-4d2f-b2c6-fbec76ce1cc5">
+                <propertyInstance
+                  Id="fa5dbd76-cdb0-4878-b02d-c749aa16e262"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e6b9399-fb09-4b4f-b371-f14e58a6fddc">
+                <propertyInstance
+                  Id="181c8baa-cf71-420e-89f6-2cec6193facd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40e1a827-ff9b-40d4-84b9-93b3cd1bbec5">
+                <propertyInstance
+                  Id="bea03211-1902-4a76-b280-7ae00a372835"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95bee7cf-62ac-47ba-8eb7-827833f2ad62">
+                <propertyInstance
+                  Id="c9b36cc9-66b5-4fbb-8aff-07d73ae45e32"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2a512c65-deee-4199-ba96-eef5b1cf3569">
+                <propertyInstance
+                  Id="dd7a0cc3-0139-4c9b-929c-587d0ae462c7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="009e0fbc-876b-4fbc-a898-1b68245ef4be"
+        LastKnownName="Animation"
+        LastKnownLocation="Package2_0700.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

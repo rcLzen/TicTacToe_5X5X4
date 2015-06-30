@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="009e0fbc-876b-4fbc-a898-1b68245ef4be"
+  name="Animation"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bfecd3e9-9f4c-4c4a-80c1-3a7d47a8bd6e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Windows.Media.Animation"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f12cd777-eb17-4a69-9599-9d77e2f53a38"
+        name="BeginStoryboard"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="799c31d0-b3e0-4b52-b54c-8de684fb1f74"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FPresentationFramework.dll&quot; Namespace%3DSystem.Windows.Media.Animation Type%3DBeginStoryboard"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="056138a2-cacd-4f83-b9ee-7fba9c3ce003"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0889e6e7-a853-42b3-8fbe-d7a33ba7e37c">
+                <propertyInstance
+                  Id="f2a15599-ce2b-48e3-a4ba-78e13e76ce8f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bb099c2-648b-4ab5-894d-c49a5480acff">
+                <propertyInstance
+                  Id="ccac1b1a-23bd-44ac-9cc7-729e3f53133c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15b6a0a7-4444-435d-beed-fd77e5185d67">
+                <propertyInstance
+                  Id="5cefe0c4-4c97-4ea2-ae66-2090da21e583"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="645d8164-e605-4124-8438-1574c64d5635">
+                <propertyInstance
+                  Id="9eea867e-1f8a-4e61-b25f-89dacba1d265"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02324b19-151d-4888-9f1b-840bc064fe6b">
+                <propertyInstance
+                  Id="ff15510e-0428-42c6-a03e-b1751b7e5a28"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

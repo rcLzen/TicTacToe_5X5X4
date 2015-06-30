@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f514961e-da0b-4b25-b3a7-9ce3bcd3f014}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingTicTacToe</Name>
+    <RootNamespace>ModelingProject1</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="MultiPlayer.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MultiPlayer.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MultiPlayer.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Rankings.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Rankings.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Rankings.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Settings.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Settings.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Settings.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Settings.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Settings.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Settings.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SinglePlayer.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SinglePlayer.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SinglePlayer.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Tutorial.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tutorial.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Tutorial.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0640.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0643.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0646.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0657.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0658.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_0658.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_0700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_0640.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_0658.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_0640.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0643.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0646.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0652.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0657.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0658.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0700.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_0843.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Play.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Play.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Play.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Rankings.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Rankings.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Rankings.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Tutorial.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tutorial.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Tutorial.sequencediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject1.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

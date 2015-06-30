@@ -1,0 +1,35 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	mc:Ignorable="d"
+	x:Class="TicTacToe_Ultimate_Edition.GridPlayer2WinControl"
+	x:Name="UserControl"
+	d:DesignWidth="200" d:DesignHeight="200">
+
+	<UserControl.Resources>
+		<Storyboard x:Key="Player2Wins">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridPlayer2Win">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid x:Name="GridPlayer2Win">
+			<Image x:Name="imgAvatar" Height="80" Width="80" Margin="10,110,110,10">
+				<Image.Effect>
+					<DropShadowEffect/>
+				</Image.Effect>
+			</Image>
+			<ed:Callout x:Name="callout" AnchorPoint="0.093,1.649" CalloutStyle="RoundedRectangle" Content="I Win!!!" FontSize="14.667" StrokeThickness="3" Foreground="#FFC7644E" FontWeight="Bold" Margin="73,44,19,112" Visibility="Hidden">
+				<ed:Callout.Fill>
+					<SolidColorBrush Color="#FFC1B7B7" Opacity="0.8"/>
+				</ed:Callout.Fill>
+			</ed:Callout>
+		</Grid>
+	</Grid>
+</UserControl>

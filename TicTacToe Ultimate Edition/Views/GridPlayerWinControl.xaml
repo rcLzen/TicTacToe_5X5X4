@@ -1,0 +1,54 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	mc:Ignorable="d"
+	x:Class="TicTacToe_Ultimate_Edition.GridPlayerWinControl"
+	x:Name="UserControl"
+	d:DesignWidth="200" d:DesignHeight="200">
+
+	<UserControl.Resources>
+		<Storyboard x:Key="Player1_Win">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GridPlayerWin">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="GridPlayerWin">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="360"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="360"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="callout">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid x:Name="GridPlayerWin" RenderTransformOrigin="0.5,0.5">
+			<Grid.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="360"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Grid.RenderTransform>
+			<Image x:Name="imgAvatar" Height="80" Width="80" Margin="110,110,10,10">
+				<Image.Effect>
+					<DropShadowEffect/>
+				</Image.Effect>
+			</Image>
+			<ed:Callout x:Name="callout" AnchorPoint="0.417,1.594" CalloutStyle="RoundedRectangle" Content="I Won!!!" FontSize="14.667" StrokeThickness="3" Foreground="#FFC7644E" FontWeight="Bold" Margin="39,50,53,106" Visibility="Hidden">
+				<ed:Callout.Fill>
+					<SolidColorBrush Color="#FFC1B7B7" Opacity="0.8"/>
+				</ed:Callout.Fill>
+			</ed:Callout>
+
+
+		</Grid>
+	</Grid>
+</UserControl>

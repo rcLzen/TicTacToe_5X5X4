@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e6cba2ca-1154-45e5-a624-69e5e2ecf51f"
+  name="Properties"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="13a96fc9-e3cc-4e60-9c4f-e1e65559a6e2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTicTacToe_Ultimate_Edition.Properties"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="84c9a595-5494-44ca-a959-21cac0377f80"
+        name="Settings"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b43d5eaf-cd7f-4b47-bc45-9e7a253b4b76"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLorenzen%2FSource%2FWorkspaces%2FTicTacToeApp%2FTicTacToe Ultimate Edition%2FTicTacToe Ultimate Edition%2Fbin%2FDebug%2FTicTacToe Ultimate Edition.exe&quot; Namespace%3DTicTacToe_Ultimate_Edition.Properties Type%3DSettings"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cdb7aee9-b439-4dda-92e4-154359cfc4ba"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75845f50-a974-43a6-a9e9-51335bae5bce">
+                <propertyInstance
+                  Id="78d7973e-d582-4306-b1bf-d6e679fb982f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bb6d4cf-5c46-41f5-bcb5-8ca513eb7b77">
+                <propertyInstance
+                  Id="ed672c0e-11a3-4705-a15d-d510213e8a28"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0da712a-fec4-400e-87b3-5ee4823c9b92">
+                <propertyInstance
+                  Id="747dfa6b-6426-4143-9e8b-fedb3740b20c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="114ab30e-7f3a-4c27-80ad-dc14aebb6527">
+                <propertyInstance
+                  Id="090be59b-b875-40f1-90ed-6ca28ba387e3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb9fcd60-4b34-4b8a-bb79-d14c5ddbe8f6">
+                <propertyInstance
+                  Id="5bde9e20-7678-40b2-a317-ca9987935e06"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="f9fa0c98-b458-467d-8af0-d768bca3ab45"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3adc1297-8f07-4843-a137-481d398c12ed"
+              LastKnownName="ApplicationSettingsBase"
+              LastKnownLocation="Package3_0658.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="187a536b-be7d-41b7-88a6-00556553e2b5"
+            isDerived="false"
+            sourceEndRoleName="Settings"
+            targetEndRoleName="Default"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="84c9a595-5494-44ca-a959-21cac0377f80"
+              LastKnownName="Settings"
+              LastKnownLocation="Package_0658.uml" />
+            <description>Property Default references type Settings.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="244b82b8-4a57-499b-ae49-a422f45cbfc3"
+                  name="Settings"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d2f23029-16e3-4540-95f5-7a7e6db5c4d3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="876e68da-5cfb-4957-8584-94984db9fe6f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e09089fb-c000-4faf-a9e8-3ba3fe971ae1"
+                  name="Default"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="32cb3a18-9d7f-4946-bfac-828acd071578"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b108a872-4602-4da8-9150-2c259f48e8b7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="7aaa22b0-caca-40ce-a799-8c5dcfcae860"
+            name="Default"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4428e23d-b455-4868-a865-467b66716fbe"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLorenzen%2FSource%2FWorkspaces%2FTicTacToeApp%2FTicTacToe Ultimate Edition%2FTicTacToe Ultimate Edition%2Fbin%2FDebug%2FTicTacToe Ultimate Edition.exe&quot; Namespace%3DTicTacToe_Ultimate_Edition.Properties Type%3DSettings Member%3DDefault"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9037522d-9216-4b16-b216-6941d1e62fcc"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d495a17-a778-4d52-9b22-d61f82bd9385">
+                    <propertyInstance
+                      Id="07c076f4-4fde-4a24-9c94-7742f777da12"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61836ffc-6a97-44ba-a71c-3ff6fbb29f7f">
+                    <propertyInstance
+                      Id="78e10a69-4e33-47a6-9a10-9a1e58e9d558"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f266af25-52b9-48ae-957c-ab47892b7fa8">
+                    <propertyInstance
+                      Id="bf4108bd-e54c-4afb-a665-9b8d2bfefa4b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3e3d1ab-c57b-4050-8e4f-3c3dcdee713f">
+                    <propertyInstance
+                      Id="c263864c-a8e2-4992-a30d-38c4fce0282a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75628273-f04a-4272-a8d0-098408ff1bdf">
+                    <propertyInstance
+                      Id="2bd88a23-779b-4981-97bf-5f349c579753"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c30ec45-6023-4099-aa51-10364285a911">
+                    <propertyInstance
+                      Id="e432c2af-c0bc-4e33-9f93-73d1883d6021"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="201b2c31-bcde-4192-a948-613948dae3ec">
+                    <propertyInstance
+                      Id="6d8c0695-d033-4ca1-bb48-1a9ba26108ef"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="84c9a595-5494-44ca-a959-21cac0377f80"
+                LastKnownName="Settings"
+                LastKnownLocation="Package_0658.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="caddd91b-8d0f-4141-b10a-37b27e479daf"
+            name="defaultInstance"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d68eafe7-acab-4c82-b6a0-032ae9076601"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLorenzen%2FSource%2FWorkspaces%2FTicTacToeApp%2FTicTacToe Ultimate Edition%2FTicTacToe Ultimate Edition%2Fbin%2FDebug%2FTicTacToe Ultimate Edition.exe&quot; Namespace%3DTicTacToe_Ultimate_Edition.Properties Type%3DSettings Member%3DdefaultInstance"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c3cc4f54-0814-44f6-b13d-b6f82a5bcebe"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c66c6fbd-8396-468f-8b7e-92262cd529d4">
+                    <propertyInstance
+                      Id="eaaaef08-7a1e-4390-8c28-3b6b88e63867"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14ccc5f9-4b56-4af5-8f99-b1ea900bb3d9">
+                    <propertyInstance
+                      Id="54b62a1d-2688-4866-aec1-5cc3f1a5c6da"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0370c46f-98aa-4cac-9735-f2627236a89c">
+                    <propertyInstance
+                      Id="a83ed0a2-a51b-4726-b864-5c50af6308d7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="24b6f653-cbd4-469c-9b26-e7246299f6c6">
+                    <propertyInstance
+                      Id="68227307-5382-4a1c-b177-3e23a3ac8266"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a22c1c21-efce-44e3-a46f-bd807e050844">
+                    <propertyInstance
+                      Id="88a85d69-9cef-4317-8a47-92b24da44b13"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="84c9a595-5494-44ca-a959-21cac0377f80"
+                LastKnownName="Settings"
+                LastKnownLocation="Package_0658.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="936437fd-aefc-4516-99d5-cf83efaa4f36"
+            name="Settings"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0800b723-318f-4b63-aa7f-ac5c5e2939b9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLorenzen%2FSource%2FWorkspaces%2FTicTacToeApp%2FTicTacToe Ultimate Edition%2FTicTacToe Ultimate Edition%2Fbin%2FDebug%2FTicTacToe Ultimate Edition.exe&quot; Namespace%3DTicTacToe_Ultimate_Edition.Properties Type%3DSettings Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8fab80b5-e1cb-4ff7-8c50-59728b5e7bfc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb9c0bfa-f319-4cb3-b807-d73432d259d9">
+                    <propertyInstance
+                      Id="336cdd3d-17ae-4748-9387-bf8f2dcdda09"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="518c41b0-465b-4dc0-9d8c-09f92e08e5f4">
+                    <propertyInstance
+                      Id="a3875d6d-a2b7-4f7e-86a6-6d74ab1e6a35"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce94bea5-643e-490c-bddf-be64cc015f0a">
+                    <propertyInstance
+                      Id="3bfc8127-90b9-42d4-97af-cd6984c8ec05"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd498a96-bded-4a48-9a25-8f8f22ba17bb">
+                    <propertyInstance
+                      Id="1bf60de8-eedd-4101-9248-592b06ea6683"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aeec0a9b-417e-41d1-a657-dca09559c33e">
+                    <propertyInstance
+                      Id="d8effd4d-71d5-43d2-ab47-2e899b34030c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3449b879-a70f-4624-8443-c503020ed706">
+                    <propertyInstance
+                      Id="bf26ba6b-2657-464c-9007-4d08a4f21d1d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
